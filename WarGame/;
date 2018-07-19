@@ -1,0 +1,36 @@
+#ifndef CARD_H
+#define CARD_H
+#include <iostream>
+using namespace std;
+
+//ostream& operator<<(ostream& out, Card& aCard);	
+
+ostream& operator<<(ostream & out, Card & aCard){
+	switch(aCard.rank){
+	case 1: out << "Ace"; break;
+	case 11:out << "Jack"; break;
+	case 12:out << "Queen"; break;
+	case 13:out << "King"; break;
+	default:
+		out << aCard.rank; break;
+	}
+
+	switch(aCard.suit){
+		case diamond: out << " of Diamonds"; break;
+		case spade: out << " of Spades"; break;
+		case heart: out << " of Hearts"; break;
+		case club: out << " of Clubs"; break;
+	}
+	return out;
+}
+
+class Card{
+	enum suits{spade, diamond, club, heart};
+		public:	
+		int rank;
+		suits suit;
+		Card();
+		Card(int rv, suits sv);
+	
+};
+#endif
