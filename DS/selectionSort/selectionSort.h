@@ -18,19 +18,19 @@ void selectionSort(int arr[],int n){
 		int k = 1;
 		
 		for (j = pass+1; j<n; j++){
-			// cout << "	Comparing " << arr[pass] << " with " << arr[j] << endl; 	
+			cout << "	Comparing " << arr[pass] << " with " << arr[j] << endl; 	
 			if (arr[j] < arr[pass]){
 				smallIndex = j;
 				if (smallIndex != pass){
 					temp = arr[pass];
-					// cout << "	Switching " << arr[pass] << " with ";
+					cout << "	Switching " << arr[pass] << " with ";
 					arr[pass]=arr[smallIndex];
-					// cout << arr[smallIndex] << endl;
+					cout << arr[smallIndex] << endl;
 					arr[smallIndex]=temp;
-					// cout << "		New array" << endl;
-					// cout << "		";
-					//printArr(arr,15);
-					// cout << endl;
+					cout << "		New array" << endl;
+					cout << "		";
+					printArr(arr,15);
+					cout << endl;
 				}	
 			}
 		}
